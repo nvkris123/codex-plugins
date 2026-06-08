@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Generated personal data
+amazon-history-categorized/
+Your Orders/
+dashboard/
+*.log

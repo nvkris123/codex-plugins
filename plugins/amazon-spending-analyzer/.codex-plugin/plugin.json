@@ -1,0 +1,22 @@
+{
+  "name": "amazon-spending-analyzer",
+  "version": "0.1.0",
+  "description": "Ingest, categorize, analyze, and dashboard Amazon order-history exports with Codex.",
+  "author": {
+    "name": "Vinay"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Amazon Spending Analyzer",
+    "shortDescription": "Analyze Amazon order exports with deterministic scripts and Codex category review.",
+    "longDescription": "Amazon Spending Analyzer ingests Amazon Your Orders exports into annual categorized CSVs, lets Codex resolve only the ambiguous category review rows, answers aggregate spending questions, and builds a static HTML dashboard.",
+    "developerName": "Vinay",
+    "category": "Productivity",
+    "capabilities": [
+      "Local file processing",
+      "Data analysis",
+      "Dashboard generation"
+    ],
+    "defaultPrompt": "Ingest my Amazon order export, resolve remaining categories, and summarize my biggest spending categories."
+  }
+}
