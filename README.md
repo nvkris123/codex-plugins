@@ -1,18 +1,23 @@
-# Useful Codex Plugins
+# Useful Plugins for Codex and Claude Code
 
-This repository is a Codex plugin marketplace. Add it once, then install any plugin listed here from Codex's plugin browser.
+This repository is a plugin marketplace that works with **both Codex and Claude Code**.
+The plugins share one source tree — the same skills and scripts run on either host;
+only the thin manifest/marketplace wrapper files differ. Add the marketplace once for
+your tool of choice, then install any plugin listed here.
 
 ## Install
 
 Requires:
 
-- Codex CLI
+- Codex CLI or Claude Code CLI
 - Python 3 for plugins that bundle Python scripts
+
+### Codex
 
 Add this marketplace:
 
 ```bash
-codex plugin marketplace add nvkris123/codex-plugins
+codex plugin marketplace add nvkris123/ai-plugins
 ```
 
 Open the Codex plugin browser:
@@ -22,7 +27,24 @@ codex
 /plugins
 ```
 
-Choose the **Useful Codex Plugins** marketplace, then install and enable the plugin you want.
+Choose the **Useful AI Plugins** marketplace, then install and enable the plugin you want.
+
+### Claude Code
+
+Add this marketplace:
+
+```bash
+claude plugin marketplace add nvkris123/ai-plugins
+```
+
+Install a plugin:
+
+```bash
+claude plugin install amazon-spending-analyzer@ai-plugins
+```
+
+Or browse interactively from inside Claude Code with `/plugin`. Skills are namespaced
+by plugin, e.g. `amazon-spending-analyzer:amazon-orders-ingest`.
 
 ## Available Plugins
 
@@ -108,16 +130,24 @@ Do not share generated output folders such as `amazon-history-categorized/`; the
 
 ## Marketplace Structure
 
+A single plugin source tree serves both hosts. The `skills/` and `scripts/`
+directories are shared verbatim; each host reads its own manifest and marketplace
+file, ignoring the other's.
+
 ```text
-.agents/plugins/marketplace.json
+.agents/plugins/marketplace.json     # Codex marketplace
+.claude-plugin/marketplace.json      # Claude Code marketplace
 plugins/
   amazon-spending-analyzer/
-    .codex-plugin/plugin.json
-    skills/
-    scripts/
+    .codex-plugin/plugin.json        # Codex manifest
+    .claude-plugin/plugin.json       # Claude Code manifest
+    skills/                          # shared by both hosts
+    scripts/                         # shared by both hosts
 ```
 
 ## Troubleshooting
+
+### Codex
 
 List configured marketplaces:
 
@@ -132,6 +162,30 @@ codex plugin marketplace upgrade
 ```
 
 If a plugin does not appear, restart Codex and open `/plugins` again.
+
+### Claude Code
+
+List configured marketplaces:
+
+```bash
+claude plugin marketplace list
+```
+
+Refresh marketplaces (all, or a single one by name):
+
+```bash
+claude plugin marketplace update
+claude plugin marketplace update ai-plugins
+```
+
+List installed plugins:
+
+```bash
+claude plugin list
+```
+
+If a plugin does not appear, run `claude plugin marketplace update ai-plugins`,
+then restart Claude Code and open `/plugin` again.
 
 ## License
 

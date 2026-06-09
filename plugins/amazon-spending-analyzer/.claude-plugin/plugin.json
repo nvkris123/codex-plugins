@@ -1,0 +1,17 @@
+{
+  "name": "amazon-spending-analyzer",
+  "displayName": "Amazon Spending Analyzer",
+  "version": "0.1.0",
+  "description": "Ingest, categorize, analyze, and dashboard Amazon order-history exports. Deterministic Python scripts do the heavy lifting; model reasoning is used only to resolve ambiguous category review rows.",
+  "author": {
+    "name": "Vinay"
+  },
+  "license": "MIT",
+  "keywords": [
+    "amazon",
+    "spending",
+    "orders",
+    "analytics",
+    "dashboard"
+  ]
+}

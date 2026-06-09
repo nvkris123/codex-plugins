@@ -1,7 +1,7 @@
 {
-  "name": "codex-plugins",
+  "name": "ai-plugins",
   "interface": {
-    "displayName": "Useful Codex Plugins"
+    "displayName": "Useful AI Plugins"
   },
   "plugins": [
     {

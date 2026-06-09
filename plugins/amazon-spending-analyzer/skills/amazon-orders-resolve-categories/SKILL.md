@@ -1,11 +1,11 @@
 ---
 name: amazon-orders-resolve-categories
-description: Resolve ambiguous Amazon order categories left in amazon-history-categorized review CSVs using Codex reasoning, then apply those decisions with the bundled helper script. Use when the user asks to resolve remaining Amazon categories, finish categorization, classify review rows, or continue after deterministic ingest.
+description: Resolve ambiguous Amazon order categories left in amazon-history-categorized review CSVs using AI reasoning, then apply those decisions with the bundled helper script. Use when the user asks to resolve remaining Amazon categories, finish categorization, classify review rows, or continue after deterministic ingest.
 ---
 
 # Amazon Orders Resolve Categories
 
-Use Codex reasoning only on review CSVs. Do not read the full annual order CSVs for category resolution.
+Use AI reasoning only on review CSVs. Do not read the full annual order CSVs for category resolution.
 
 ## Files
 
@@ -24,7 +24,7 @@ Review inputs:
 Decision output:
 
 ```text
-<workdir>/review/codex-category-decisions-YYYYMMDD-HHMMSS.json
+<workdir>/review/category-decisions-YYYYMMDD-HHMMSS.json
 ```
 
 Apply command:
@@ -52,7 +52,7 @@ Resolve `<plugin-root>` as the root of this installed plugin, two directories ab
     "url": "optional URL from review CSV",
     "category": "category",
     "notes": "short reason",
-    "source": "codex_skill"
+    "source": "ai_skill"
   }
 ]
 ```

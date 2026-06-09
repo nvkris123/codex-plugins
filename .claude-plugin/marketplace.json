@@ -1,0 +1,15 @@
+{
+  "name": "ai-plugins",
+  "description": "Useful plugins that run on both Codex and Claude Code.",
+  "owner": {
+    "name": "Vinay"
+  },
+  "plugins": [
+    {
+      "name": "amazon-spending-analyzer",
+      "description": "Analyze Amazon order exports with deterministic scripts and AI category review.",
+      "category": "Productivity",
+      "source": "./plugins/amazon-spending-analyzer"
+    }
+  ]
+}

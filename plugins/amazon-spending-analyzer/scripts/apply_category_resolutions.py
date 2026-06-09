@@ -94,7 +94,7 @@ def load_decisions(path):
                 "url": clean(row.get("url") or row.get("normalized_asin_url")),
                 "category": category,
                 "notes": clean(row.get("notes")),
-                "source": clean(row.get("source") or row.get("resolution_source")) or "codex_skill",
+                "source": clean(row.get("source") or row.get("resolution_source")) or "ai_skill",
             }
         )
     return decisions
@@ -185,7 +185,7 @@ def apply_to_orders(workdir, decisions):
             row["category"] = decision["category"]
             row["category_source"] = decision["source"]
             row["category_confidence"] = "medium"
-            row["category_reason"] = decision["notes"] or "Codex skill category review"
+            row["category_reason"] = decision["notes"] or "AI skill category review"
             row["category_needs_review"] = "false"
             updated += 1
             changed = True
@@ -215,7 +215,7 @@ def refresh_review_files(workdir, decisions):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Apply Codex/manual Amazon category decisions to annual categorized CSVs."
+        description="Apply AI/manual Amazon category decisions to annual categorized CSVs."
     )
     parser.add_argument("--workdir", type=Path, default=Path(DEFAULT_WORKDIR), help=f"Default: {DEFAULT_WORKDIR}")
     parser.add_argument(
