@@ -120,6 +120,34 @@ Default generated output:
 amazon-history-categorized/
 ```
 
+### Hermes Tweet
+
+Use Hermes Agent for X/Twitter research, monitoring, and approval-gated actions
+through Xquik.
+
+Hermes Tweet is a source-native Codex and Claude Code plugin wrapper around the
+published Hermes Agent plugin. It keeps social research read-first, shows the
+Hermes install command, and reminds agents that account-changing actions require
+explicit `HERMES_TWEET_ENABLE_ACTIONS=true` gating.
+
+It can:
+
+- help install the Hermes Tweet package from PyPI or GitHub
+- discover supported X/Twitter read and action routes through `tweet_explore`
+- use `tweet_read` for social research, replies, monitoring, and exports
+- keep posts, replies, DMs, follows, monitor changes, and webhook changes behind
+  explicit action gating
+
+Example prompts:
+
+```text
+Use Hermes Tweet for X/Twitter social research in this session.
+```
+
+```text
+Install Hermes Tweet for Hermes Agent and keep account-changing actions disabled.
+```
+
 ## Privacy
 
 Plugins in this repository are designed to run local scripts where possible. Amazon Spending Analyzer keeps your Amazon export local. Its deterministic ingestion, analysis, and dashboard scripts do not call an LLM, Codex CLI, or an API.

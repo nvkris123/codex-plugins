@@ -1,0 +1,34 @@
+{
+  "name": "hermes-tweet",
+  "version": "0.1.6",
+  "description": "Use Hermes Agent for X/Twitter research, monitoring, and approval-gated actions through Xquik.",
+  "author": {
+    "name": "Xquik",
+    "url": "https://github.com/Xquik-dev"
+  },
+  "homepage": "https://github.com/Xquik-dev/hermes-tweet#readme",
+  "repository": "https://github.com/Xquik-dev/hermes-tweet",
+  "license": "MIT",
+  "keywords": [
+    "hermes-agent",
+    "xquik",
+    "twitter",
+    "x",
+    "social-media",
+    "automation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hermes Tweet",
+    "shortDescription": "Use Hermes Agent for X/Twitter research and gated actions.",
+    "longDescription": "Hermes Tweet helps Codex install and use the Hermes Agent X/Twitter plugin for read-first social research, monitoring, exports, and approval-gated account actions through Xquik.",
+    "developerName": "Xquik",
+    "category": "Productivity",
+    "capabilities": [
+      "Social research",
+      "Monitoring",
+      "Approval-gated actions"
+    ],
+    "defaultPrompt": "Use Hermes Tweet for X/Twitter social research. Keep account-changing actions disabled unless explicitly requested."
+  }
+}

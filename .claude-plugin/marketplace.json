@@ -10,6 +10,12 @@
       "description": "Analyze Amazon order exports with deterministic scripts and AI category review.",
       "category": "Productivity",
       "source": "./plugins/amazon-spending-analyzer"
+    },
+    {
+      "name": "hermes-tweet",
+      "description": "Use Hermes Agent for X/Twitter research, monitoring, and approval-gated actions through Xquik.",
+      "category": "Productivity",
+      "source": "./plugins/hermes-tweet"
     }
   ]
 }
