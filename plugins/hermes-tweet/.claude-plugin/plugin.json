@@ -1,0 +1,19 @@
+{
+  "name": "hermes-tweet",
+  "displayName": "Hermes Tweet",
+  "version": "0.1.6",
+  "description": "Use Hermes Agent for X/Twitter research, monitoring, and approval-gated actions through Xquik.",
+  "author": {
+    "name": "Xquik",
+    "url": "https://github.com/Xquik-dev"
+  },
+  "license": "MIT",
+  "keywords": [
+    "hermes-agent",
+    "xquik",
+    "twitter",
+    "x",
+    "social-media",
+    "automation"
+  ]
+}
