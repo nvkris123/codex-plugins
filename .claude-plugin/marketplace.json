@@ -10,6 +10,12 @@
       "description": "Analyze Amazon order exports with deterministic scripts and AI category review.",
       "category": "Productivity",
       "source": "./plugins/amazon-spending-analyzer"
+    },
+    {
+      "name": "x-twitter-scraper",
+      "description": "Plan Xquik X/Twitter data workflows with REST API routing, MCP setup, SDKs, webhooks, exports, monitoring, and confirmation-gated actions.",
+      "category": "Productivity",
+      "source": "./plugins/x-twitter-scraper"
     }
   ]
 }

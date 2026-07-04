@@ -120,6 +120,26 @@ Default generated output:
 amazon-history-categorized/
 ```
 
+### Xquik X/Twitter Data
+
+Plan X/Twitter data workflows with Xquik REST API routing, MCP setup, SDKs, webhooks, exports, monitoring, and confirmation-gated actions.
+
+It can:
+
+- choose the narrowest Xquik route for tweet, profile, timeline, follower, or search data
+- prepare MCP setup steps for agent workflows
+- plan monitor or webhook workflows with HMAC verification
+- draft SDK or OpenAPI integration steps for apps and dashboards
+- add approval gates before private reads, persistent work, or write actions
+
+Example prompts:
+
+```text
+Use Xquik to plan a tweet-search export for the last 24 hours.
+Set up the Xquik MCP server for my agent workflow.
+Design a gated X monitor workflow with webhook delivery.
+```
+
 ## Privacy
 
 Plugins in this repository are designed to run local scripts where possible. Amazon Spending Analyzer keeps your Amazon export local. Its deterministic ingestion, analysis, and dashboard scripts do not call an LLM, Codex CLI, or an API.
@@ -143,6 +163,10 @@ plugins/
     .claude-plugin/plugin.json       # Claude Code manifest
     skills/                          # shared by both hosts
     scripts/                         # shared by both hosts
+  x-twitter-scraper/
+    .codex-plugin/plugin.json
+    .claude-plugin/plugin.json
+    skills/
 ```
 
 ## Troubleshooting
